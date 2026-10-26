@@ -1,275 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<title>CS GO Pagina oficial</title>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: #f8fafc;
-    color: #334155;
-    line-height: 1.7;
-}
-header {
-    background: linear-gradient(135deg, #07489e 0%, #dbab0b 100%);
-    color: rgb(12, 12, 12);
-    padding: 50px 20px 70px;
-    text-align: center;
-}
-header h1 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-header > p {
-    max-width: 700px;
-    margin: 0 auto 10px;
-    font-size: 17px;
-    opacity: 0.95;
-}
-header img {
-    border-radius: 16px;
-    margin: 25px 0 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 4px solid white;
-    max-width: 100%;
-}
-header figure figcaption {
-    font-size: 13px;
-    opacity: 0.8;
-    margin-bottom: 20px;
-}
-nav {
-    background: white;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 15px;
-    margin: -30px auto 0;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 10;
-}
-nav a {
-    text-decoration: none;
-    color: #fcc204;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background: #f0fdfa;
-    transition: 0.3s;
-}
-nav a:hover {
-    background: #fcc204;
-    color: white;
-    transform: translateY(-2px);
-}
-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 16px;
-    padding: 35px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    overflow: hidden;
-}
-section > img {
-    width: 100%;
-    max-width: 380px;
-    border-radius: 12px;
-    float: left;
-    margin: 0 25px 15px 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-section figcaption {
-    font-size: 12px;
-    color: #64748b;
-    margin-bottom: 15px;
-    font-style: italic;
-}
-section h2 {
-    color: #fcc204;
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-left: 5px solid #fcc204;
-    padding-left: 15px;
-}
-section h3 {
-    color: #fcc204;
-    margin: 25px 0 10px;
-    font-size: 18px;
-}
-#Gastronomia ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-#Gastronomia li {
-    background: #f8fafc;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    transition: 0.3s;
-}
-#Gastronomia li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-#Gastronomia li p {
-    font-size: 14px;
-    margin-top: 8px;
-    color: #475569;
-}
-aside {
-    max-width: 1000px;
-    margin: 0 auto 40px;
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 12px;
-    padding: 25px;
-    text-align: center;
-}
-aside h2 { color: #fcc204; margin-bottom: 10px; font-size: 22px; }
-aside a {
-    display: inline-block;
-    margin-top: 12px;
-    background: #fcc204;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-aside a:hover { background: #fcc204; }
-.footer-imoveis {
-    background: #111827;
-    color: #d1d5db;
-    padding: 40px 20px;
-    margin-top: 50px;
-}
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.footer-left h3 { color: #fff; margin: 0 0 5px 0; font-size: 18px; }
-.footer-left span { color: #14b8a6; font-size: 13px; font-weight: 600; text-transform: uppercase; }
-.footer-left p { margin: 15px 0 0 0; font-size: 13px; line-height: 1.6; color: #9ca3af; }
-.footer-left b { color: #fff; }
-.footer-right { text-align: right; }
-.footer-right p { margin: 0 0 15px 0; font-size: 13px; }
-.btn-topo {
-    display: inline-block;
-    background: #14b8a6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    transition: 0.3s;
-}
-.btn-topo:hover { background: #fff; color: #111827; transform: translateY(-2px); }
-@media(max-width: 768px){
-    header h1 { font-size: 30px; }
-    section > img { float: none; margin: 0 0 15px 0; max-width: 100%; }
-    section { padding: 20px; margin: 20px 15px; }
-    nav { margin: 20px 15px 0; }
-    .footer-container { flex-direction: column; text-align: center; }
-    .footer-right { text-align: center; }
-}
-
-
-</style>
+    <title>CS GO Pagina oficial</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f8fafc;
+            color: #334155;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #07489e 0%, #dbab0b 100%);
+            color: rgb(12, 12, 12);
+            padding: 50px 20px 70px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        header > p {
+            max-width: 700px;
+            margin: 0 auto 10px;
+            font-size: 17px;
+            opacity: 0.95;
+        }
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px;
+            margin: -30px auto 0;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fcc204;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f0fdfa;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #fcc204;
+            color: white;
+            transform: translateY(-2px);
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        section > img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 12px;
+            float: left;
+            margin: 0 25px 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        section h2 {
+            color: #fcc204;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-left: 5px solid #fcc204;
+            padding-left: 15px;
+        }
+        footer {
+            background: #e7e7e7;
+            color: #0c0c0c;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            color: #07489e;
+            margin: 0 auto; /* Corrigido de '2 auto' para '0 auto' */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-left h3 {
+            color: #07489e;
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+        .footer-left span {
+            color: #fcc204;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .footer-left p {
+            margin: 15px 0 0 0;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #475569;
+        }
+        .footer-right {
+            text-align: right;
+        }
+        .footer-right p {
+            margin: 0 0 15px 0;
+            font-size: 13px;
+        }
+        .btn-topo {
+            display: inline-block;
+            background: #fcc204;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+        .btn-topo:hover {
+            background: #07489e;
+            color: white;
+            transform: translateY(-2px);
+        }
+        @media(max-width: 768px){
+            header h1 { font-size: 30px; }
+            section > img { float: none; margin: 0 0 15px 0; max-width: 100%; }
+            section { padding: 20px; margin: 20px 15px; }
+            nav { margin: 20px 15px 0; }
+            .footer-container { flex-direction: column; text-align: center; }
+            .footer-right { text-align: center; }
+        }
+        video {
+            display: inline-block;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
-<body >
-    <header>
-        <h1>Couter-strike 2</h1>
-        <p>A era do CS GO chegou!</p>
+<body>
 
-       <video width="640" height="360" controls preload="auto">
-        <source src="https://youtu.be/Rd3Uc8Nr0vA?si=lCYrXz9eKu_pKSkO" type="video/mp4">
-       </video>
-        <br>
-        <br>
-      <nav>
+    <header> 
+        <h1>Counter-Strike 2</h1>
+        <p>A era do CS:GO chegou ao fim, bem-vindo ao CS2!</p>
+        <video width="640" height="360" controls preload="auto">
+            <source src="videos/videoplayback.mp4" type="video/mp4">
+        </video>
+    </header>
 
-        <a href="#loja">loja</a>
-        <a href="#noticias">Principais noticias</a>
+    <nav>
+        <!-- Removidos os links sem seção correspondente para o código ficar limpo -->
+        <a href="#noticias">Principais notícias</a>
         <a href="#dicas">Dicas para iniciantes</a>
-        <a href="#promocoes">Promoções</a>
         <a href="#comunidade">Canais da comunidade</a>
-      </nav>
+        <a href="#loja">loja</a>
+        <a href="#promocoes">Promoções</a>
 
-      <main>
+    </nav>
 
+    <main>
         <section id="noticias">
-          <img src="imagens/harry-kane.webp" alt="foto de um jogador de futebol">
-          <h2>Principal noticia </h2>
-          <article>
-            <p>O jogador ingles <b>Harry kane</b>, 
-            conhecido por jogar no Bayer de Munique, 
-            começa a jogar Cs go, com os amigos por hobby e se torna um otimo jogador, 
-            pelo visto o astro da bola nao tem limites.</p>
-
-            <p>
-              <b>harry kane </b> já gastou mais de 12 mil dolares com skins no cs go, 
-              o jogador ingles stá empenhado em pegar top global nesa temporada.
-              
-            </p>
-          </article>
-          
-
+            <img src="imagens/harry-kane.webp" alt="foto de um jogador de futebol">
+            <h2>Principal notícia</h2>
+            <article>
+                <p>O jogador inglês <b>Harry Kane</b>, conhecido por jogar no Bayern de Munique, começou a jogar CS2 com os amigos por hobby e se tornou um ótimo jogador. Pelo visto, o astro da bola não tem limites.</p>
+                <br>
+                <p><b>Harry Kane</b> já gastou mais de 12 mil dólares com skins no jogo e está empenhado em pegar o top Global nessa temporada.</p>
+                <br>
+                <p>Notícia postada por: <b>Yago Xavier</b> às 18:50, 26/10/2026</p>
+            </article>
         </section>
 
         <section id="dicas">
-          <img src="imagens/logo.webp" alt="logo de um jogo com duas figuras com ambas segurando uma arma">
-          <h2>Dicas para iniciantes</h2>
-          <article>
-            <p>
-              1. Mira e Posicionamento
-              <br>
-              • Altura da mira: Mantenha a mira sempre na altura do pescoço ou da cabeça do inimigo. Evite andar olhando para o chão.
-              • Controle de recuo (Recoil): As balas não vão exatamente no centro da mira se você atirar sem parar. Pratique puxar o mouse para baixo e compense o spray da AK-47 ou M4.
-              • Formas de tiro: Use tap (tiro único) para longas distâncias e burst (rajadas curtas) ou spray para curtas distâncias.
-
-              2. Movimentação (Counter-Strafe)
-              <br>
-              • Parar antes de atirar: Nunca atire andando. Dê um toque rápido na tecla oposta de direção (por exemplo, se está indo para a esquerda no A, dê um toque na direita D) para frear o personagem instantaneamente e garantir precisão.
-              • Uso da faca: Guarde as armas pesadas e corra com a faca na mão quando precisar se deslocar pelo mapa com segurança.</p>
-          
+            <img src="imagens/logo.webp" alt="logo do jogo Counter-Strike">
+            <h2>Dicas para iniciantes</h2>
+            <article>
+                <p><b>1. Mira e Posicionamento</b><br>
+                • Altura da mira: Mantenha a mira sempre na altura do pescoço ou da cabeça do inimigo. Evite andar olhando para o chão.<br>
+                • Controle de recuo (Recoil): As balas não vão exatamente no centro da mira se você atirar sem parar. Pratique puxar o mouse para baixo e compense o spray da AK-47 ou M4.<br>
+                • Formas de tiro: Use tap (tiro único) para longas distâncias e burst (rajadas curtas) ou spray para curtas distâncias.</p>
+                <br>
+                <p><b>2. Movimentação (Counter-Strafe)</b><br>
+                • Parar antes de atirar: Nunca atire andando. Dê um toque rápido na tecla oposta de direção (por exemplo, se está indo para a esquerda no A, dê um toque na direita D) para frear o personagem instantaneamente e garantir precisão.<br>
+                • Uso da faca: Guarde as armas pesadas e corra com a faca na mão quando precisar se deslocar pelo mapa com velocidade.</p>
             </article>
         </section>
 
         <section id="comunidade">
-          <img src="imagens/comunidade.jpg" alt="uma imagens ficticia de cinco personagens de um jogo tirando uma foto">
-          <h2>Comunidade de CS 2</h2>
-          <article>
-            <p>A comunidade de Counter-Strike no Brasil é uma das maiores, mais engajadas e tradicionais do cenário de esportes eletrônicos mundial, centrada no Counter-Strike 2 (CS2)</p>
-          </article>
-
+            <img src="imagens/comunidade.jpg" alt="personagens do jogo reunidos">
+            <h2>Comunidade de CS 2</h2>
+            <article>
+                <p>A comunidade de Counter-Strike no Brasil é uma das maiores, mais engajadas e tradicionais do cenário de esportes eletrônicos mundial, centrada no Counter-Strike 2 (CS2).</p>
+                <br>
+                <p>Deseja fazer parte dessa comunidade? Acesse o link do Discord: <a href="http://github.com/YagoXavier2004/aula07-css-incorporado">Link útil</a></p>
+            </article>
         </section>
-
-      </main>
-
+    </main>
 
     <footer>
-
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>CS Global</h3>
+                <span>Juiz de Fora • MG</span>
+                <p>© 2026 - Juiz de Fora •<br> Projeto Acadêmico SENAI MG<br> Desenvolvido por <b>Yago Xavier Do Carmo Barbosa</b> — Curso Técnico em Informática para Internet.</p>
+            </div>
+            <div class="footer-right">
+                <p><b>Você chegou até o final da página</b></p>
+                <a href="#" class="btn-topo">↑ Voltar ao topo</a>
+            </div>
+        </div>
     </footer>
-    </header>
-    </body>
-  </html>
+
+</body>
+</html>
